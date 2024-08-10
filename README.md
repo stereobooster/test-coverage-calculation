@@ -24,6 +24,7 @@ export function comp(a, b) {
 | example1.2.js | 4/4                         | 4/4                        | **3/3**               | 4/4           |
 | example1.3.js | 4/4                         | 4/4                        | **3/3**               | 4/4           |
 | example1.4.js | 6/6                         | 6/6                        | **4/4**               | 6/6           |
+| example1.5.js | 4/4                         | 4/4                        | **5/5**               | 3/3           |
 | example2.1.js | 4/4                         | 4/4                        | 4/4                   | 3/3           |
 | example3.1.js | 2/2                         | 2/2                        | 2/2                   | 2/2 or 1/1    |
 | example3.2.js | 2/2                         | 2/2                        | 2/2                   | 2/2 or 1/1    |
