@@ -182,7 +182,7 @@ expect(comp(0, 1)).toBe(-1);
 We still miss edge cases for `NaN`:
 
 ```js
-(comp(1, 1) == comp(1, NaN)) == comp(NaN, 1);
+(comp(1, 1) === comp(1, NaN)) === comp(NaN, 1);
 ```
 
 Which may be not a desired behaviour.
@@ -333,7 +333,7 @@ try {
 }
 ```
 
-But what if each function (`a`, `b`) can throw an exception. Shall we count it as 4 branches? On the other hand there is no way to know this from statical analysis unless we have type system with effects, like in [koka](https://koka-lang.github.io/koka/doc/book.html#why-effects).
+But what if each function (`a`, `b`) can throw an exception. Shall we count it as 3 (or 4) branches? On the other hand there is no way to know this from statical analysis unless we have type system with effects, like in [koka](https://koka-lang.github.io/koka/doc/book.html#why-effects).
 
 ## Example 6
 
