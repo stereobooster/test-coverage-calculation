@@ -21,27 +21,32 @@ Most of code coverage tools would say this code has 4 branches. Which seemed str
 | example0.1.js | 0/0                         | 0/0                        | 1/1                   | 1/1           |
 | example0.2.js | 2/2                         | 2/2                        | 2/2                   | 2/2           |
 | example1.1.js | 4/4                         | 4/4                        | 4/4                   | 3/3           |
-| example1.2.js | 4/4                         | 4/4                        | **3/3**               | 4/4           |
-| example1.3.js | 4/4                         | 4/4                        | **3/3**               | 4/4           |
-| example1.4.js | 6/6                         | 6/6                        | **4/4**               | 6/6           |
-| example1.5.js | 4/4                         | 4/4                        | **5/5**               | 3/3           |
+| example1.2.js | 4/4                         | 4/4                        | [3/3][v6300]          | 4/4           |
+| example1.3.js | 4/4                         | 4/4                        | [3/3][v6300]          | 4/4           |
+| example1.4.js | 6/6                         | 6/6                        | [4/4][v6300]          | 6/6           |
+| example1.5.js | 4/4                         | 4/4                        | [5/5][v6300]          | 3/3           |
 | example2.1.js | 4/4                         | 4/4                        | 4/4                   | 3/3           |
 | example3.1.js | 2/2                         | 2/2                        | 2/2                   | 2/2 or 1/1    |
 | example3.2.js | 2/2                         | 2/2                        | 2/2                   | 2/2 or 1/1    |
 | example3.3.js | 2/2                         | 2/2                        | **3/3**               | 2/2 or 1/1    |
 | example3.4.js | 4/4                         | 4/4                        | **3/3**               | 2/2 or 4/4    |
 | example4.1.js | 2/2                         | 2/2                        | **3/3**               | 2/2           |
-| example4.2.js | **1/1**                     | **1/1**                    | 2/2                   | 2/2           |
+| example4.2.js | [1/1][i795]                 | **1/1**                    | 2/2                   | 2/2           |
 | example4.3.js | 2/2                         | 2/2                        | 2/2                   | 2/2           |
-| example4.4.js | 3/3                         | **2/3**                    | 3/3                   | 3/3           |
+| example4.4.js | 3/3                         | [2/3][mcr68]               | 3/3                   | 3/3           |
 | example5.1.js | 0/0                         | 0/0                        | 2/2                   | 2/2           |
 | example6.1.js | 0/0                         | 0/0                        | 2/2                   | 2/2 or 1/1    |
 | example6.2.js | 0/0                         | 0/0                        | 2/2                   | 2/2           |
-| example7.1.js | 0/0                         | 0/0                        | 2/2                   | 2/2           |
-| example7.2.js | 0/0                         | 0/0                        | 1/2                   | 1/2           |
+| example7.1.js | [0/0][i516]                 | 0/0                        | 2/2                   | 2/2           |
+| example7.2.js | [0/0][i516]                 | 0/0                        | 1/2                   | 1/2           |
 | example8.1.js | 0/0                         | 0/0                        | **1/2**               | 1/3           |
 
 **Note**: if you have 100% coverage you probably don't care if it is 3/3 or 5/5. This would make a difference it you have less than 100%, than numbers can be skewed.
+
+[mcr68]: https://github.com/cenfun/monocart-coverage-reports/issues/68
+[i795]: https://github.com/istanbuljs/istanbuljs/issues/795
+[v6300]: https://github.com/vitest-dev/vitest/issues/6300
+[i516]: https://github.com/istanbuljs/istanbuljs/issues/516
 
 ## Example 1
 
