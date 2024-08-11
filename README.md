@@ -38,6 +38,7 @@ Most of code coverage tools would say this code has 4 branches. Which seemed str
 | example6.1.js | 0/0                         | 0/0                        | 2/2                   | 2/2 or 1/1    |
 | example6.2.js | 0/0                         | 0/0                        | 2/2                   | 2/2           |
 | example7.1.js | 0/0                         | 0/0                        | 2/2                   | 2/2           |
+| example7.2.js | 0/0                         | 0/0                        | 1/2                   | 1/2           |
 | example8.1.js | 0/0                         | 0/0                        | **1/2**               | 1/3           |
 
 **Note**: if you have 100% coverage you probably don't care if it is 3/3 or 5/5. This would make a difference it you have less than 100%, than numbers can be skewed.
