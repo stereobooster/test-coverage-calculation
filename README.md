@@ -12,7 +12,7 @@ export function comp(a, b) {
 }
 ```
 
-[Most of code coverage tools would say this code has 4 branches](https://github.com/stereobooster/vitest-coverage-v8). Which seemed strange to me. So I wondered why...
+Most of code coverage tools would say this code has 4 branches. Which seemed strange to me. So I wondered why...
 
 ## Comparison of branch coverage
 
