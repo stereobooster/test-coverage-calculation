@@ -40,7 +40,7 @@ export function comp(a, b) {
 | example7.1.js | 0/0                         | 0/0                        | 2/2                   | 2/2           |
 | example8.1.js | 0/0                         | 0/0                        | **1/2**               | 1/3           |
 
-**Note**: if you have 100% coverage you probably don't care if it is 3/3 or 5/5. This would make a difference it you have less than 100%, than number can be skewed.
+**Note**: if you have 100% coverage you probably don't care if it is 3/3 or 5/5. This would make a difference it you have less than 100%, than numbers can be skewed.
 
 ## Example 1
 
