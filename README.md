@@ -210,7 +210,7 @@ export function comp(a, b) {
 }
 ```
 
-This code has 3 branches:
+This code has 3 branches (or 4, depending on how you define "branches"):
 
 ```mermaid
 flowchart LR
