@@ -36,3 +36,15 @@
 | example7.1.js | 1/1                         | 2/2                        | 3/3                   |
 | example7.2.js | 1/1                         | 2/2                        | 3/3                   |
 | example8.1.js | 1/3                         | 2/4                        | 2/5                   |
+
+## TODO
+
+Define more precisely what is branch coverage. And what are different types of coverage, like
+
+- Loop coverage
+- Path coverage
+- Condition/predicate coverage
+- Edge coverage
+- DD-path
+- JJ-path (LCSAJ)
+- Cyclomatic complexity
