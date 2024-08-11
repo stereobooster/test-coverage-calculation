@@ -50,6 +50,11 @@ Most of code coverage tools would say this code has 4 branches. Which seemed str
 console.log(1);
 ```
 
+```mermaid
+flowchart LR
+  s --> e
+```
+
 2 branches:
 
 ```js
@@ -61,17 +66,9 @@ if (a) {
 ```
 
 ```mermaid
-%%{init: { 'gitGraph': {'showBranches': false}} }%%
-
-gitGraph
- commit id: " "
- commit id: "  "
- branch develop
- checkout develop
- commit id: "a = true"
- checkout main
- merge develop
- commit id: "   "
+flowchart LR
+  s --> if --> true --> e
+  if --> false --> e
 ```
 
 **Important** even so for `a = true` it would visit all lines of code, we as well need to execute code with `a = false` to claim that all cases have been covered.
@@ -96,20 +93,10 @@ export function comp(a, b) {
 **But** there is no difference between cases 1 and 2. If the first condition is true we will never reach code in the second condition, because of early return.
 
 ```mermaid
-%%{init: { 'gitGraph': {'showBranches': false}} }%%
-gitGraph
-    commit id: " "
-    commit id: "  "
-    branch b1
-    checkout b1
-    commit id: "if a > b"
-    checkout main
-    commit id: "   "
-    branch b2
-    checkout b2
-    commit id: "if a < b"
-    checkout main
-    commit id: "    "
+flowchart LR
+  s --> if1["a > b"] --> t1["true"] --> e
+  if1 --> f1["false"] --> if2["a < b"] --> t2["true"] --> e
+  if2 --> f2["false"] --> e
 ```
 
 On the other hand, code like this:
@@ -126,22 +113,14 @@ export function comp(a, b) {
 Indeed has 4 branches:
 
 ```mermaid
-%%{init: { 'gitGraph': {'showBranches': false}} }%%
-gitGraph
-    commit id: " "
-    commit id: "  "
-    branch b1
-    checkout b1
-    commit id: "if a > b"
-    checkout main
-    merge b1
-    commit id: "   "
-    branch b2
-    checkout b2
-    commit id: "if a < b"
-    checkout main
-    merge b2
-    commit id: "    "
+flowchart LR
+  s --> if1["a > b"]
+  if1 --> t1["true"] --> if2
+  if1 --> f1["false"] --> if2
+  if2["a < b"] --> t2["true"]
+  if2 --> f2["false"]
+  t2 --> e
+  f2 --> e
 ```
 
 ### Branches != paths
@@ -230,21 +209,14 @@ export function comp(a, b) {
 This code has 3 branches:
 
 ```mermaid
-%%{init: { 'gitGraph': {'showBranches': false}} }%%
-gitGraph
-    commit id: " "
-    commit id: "  "
-    branch b1
-    checkout b1
-    commit id: "else a === b"
-    branch b2
-    checkout b2
-    commit id: "if a > b"
-    checkout b1
-    merge b2
-    checkout main
-    merge b1
-    commit id: "    "
+flowchart LR
+  s --> if1["a === b"]
+  if1 --> t1["true"] --> e
+  if1 --> f1["false"] --> if2
+  if2["a > b"] --> t2["true"]
+  if2 --> f2["false"]
+  t2 --> e
+  f2 --> e
 ```
 
 Even so most coverage tools will report 4 branches.
