@@ -12,20 +12,20 @@ importers:
         specifier: ^2.0.5
         version: 2.0.5(vitest@2.0.5(@vitest/ui@2.0.5))
       '@vitest/coverage-v8':
-        specifier: ^2.0.3
+        specifier: ^2.0.5
         version: 2.0.5(vitest@2.0.5(@vitest/ui@2.0.5))
       '@vitest/ui':
-        specifier: ^2.0.3
+        specifier: ^2.0.5
         version: 2.0.5(vitest@2.0.5)
       vite:
-        specifier: ^5.3.4
+        specifier: ^5.4.0
         version: 5.4.0
       vitest:
-        specifier: ^2.0.3
+        specifier: ^2.0.5
         version: 2.0.5(@vitest/ui@2.0.5)
       vitest-monocart-coverage:
-        specifier: ^2.1.0
-        version: 2.1.0(vitest@2.0.5(@vitest/ui@2.0.5))
+        specifier: ^2.1.1
+        version: 2.1.1(vitest@2.0.5(@vitest/ui@2.0.5))
 
 packages:
 
@@ -937,8 +937,8 @@ packages:
       terser:
         optional: true
 
-  vitest-monocart-coverage@2.1.0:
-    resolution: {integrity: sha512-qzCo5OqOKD0gk31LL8mbGvCu0L/LZm8zW/EN793WLCV790wLCv783KgVBF7tiMgBlnMy4Ub7jC9y2Th8q/u//w==}
+  vitest-monocart-coverage@2.1.1:
+    resolution: {integrity: sha512-FlgdxjgAMVP60Uyrfcrz5+9qpTyNvek2AUwhClxV/NYrIUwXJQV79B9IJS0tgaPoBPp3SP6owsWwpAs2kDFuxg==}
 
   vitest@2.0.5:
     resolution: {integrity: sha512-8GUxONfauuIdeSl5f9GTgVEpg5BTOlplET4WEDaeY2QBiN8wSm68vxN/tb5z405OwppfoCavnwXafiaYBC/xOA==}
@@ -1855,7 +1855,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  vitest-monocart-coverage@2.1.0(vitest@2.0.5(@vitest/ui@2.0.5)):
+  vitest-monocart-coverage@2.1.1(vitest@2.0.5(@vitest/ui@2.0.5)):
     dependencies:
       '@vitest/coverage-istanbul': 2.0.5(vitest@2.0.5(@vitest/ui@2.0.5))
       '@vitest/coverage-v8': 2.0.5(vitest@2.0.5(@vitest/ui@2.0.5))
