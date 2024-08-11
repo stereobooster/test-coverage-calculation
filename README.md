@@ -73,7 +73,7 @@ if (a) {
 
 ```mermaid
 flowchart LR
-  s(s) --> if["if(a)"] -- true  --> e
+  s(s) --- if["if(a)"] -- true  --> e
   if -- false --> e(e)
 ```
 
@@ -100,8 +100,8 @@ export function comp(a, b) {
 
 ```mermaid
 flowchart LR
-  s(s) --> if1["if(a > b)"] -- true --> e
-  if1 -- false --> if2[" if(a < b)"] -- true --> e
+  s(s) --- if1["if(a > b)"] -- true --> e
+  if1 -- false --- if2[" if(a < b)"] -- true --> e
   if2 -- false --> e(e)
 ```
 
@@ -120,7 +120,7 @@ Indeed has 4 branches:
 
 ```mermaid
 flowchart LR
-  s(s) --> if1["if(a > b)"]
+  s(s) --- if1["if(a > b)"]
   if1 -- true  --> if2
   if1 -- false --> if2
   if2["if(a < b)"] -- true --> e
@@ -214,9 +214,9 @@ This code has 3 branches:
 
 ```mermaid
 flowchart LR
-  s(s) --> if1["if(a === b)"]
+  s(s) --- if1["if(a === b)"]
   if1 -- true --> e
-  if1 -- false --> if2
+  if1 -- false --- if2
   if2["if(a > b)"] -- true --> e
   if2 -- false --> e(e)
 ```
