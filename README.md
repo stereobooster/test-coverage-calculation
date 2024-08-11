@@ -73,8 +73,8 @@ if (a) {
 
 ```mermaid
 flowchart LR
-  s --> if --> true --> e
-  if --> false --> e
+  s(s) --> if["if(a)"] -- true  --> e
+  if -- false --> e(e)
 ```
 
 **Important** even so for `a = true` it would visit all lines of code, we as well need to execute code with `a = false` to claim that all cases have been covered.
@@ -100,9 +100,9 @@ export function comp(a, b) {
 
 ```mermaid
 flowchart LR
-  s --> if1["a > b"] --> t1["true"] --> e
-  if1 --> f1["false"] --> if2["a < b"] --> t2["true"] --> e
-  if2 --> f2["false"] --> e
+  s(s) --> if1["if(a > b)"] -- true --> e
+  if1 -- false --> if2[" if(a < b)"] -- true --> e
+  if2 -- false --> e(e)
 ```
 
 On the other hand, code like this:
@@ -120,13 +120,11 @@ Indeed has 4 branches:
 
 ```mermaid
 flowchart LR
-  s --> if1["a > b"]
-  if1 --> t1["true"] --> if2
-  if1 --> f1["false"] --> if2
-  if2["a < b"] --> t2["true"]
-  if2 --> f2["false"]
-  t2 --> e
-  f2 --> e
+  s(s) --> if1["if(a > b)"]
+  if1 -- true  --> if2
+  if1 -- false --> if2
+  if2["if(a < b)"] -- true --> e
+  if2 -- false --> e(e)
 ```
 
 ### Branches != paths
@@ -216,13 +214,11 @@ This code has 3 branches:
 
 ```mermaid
 flowchart LR
-  s --> if1["a === b"]
-  if1 --> t1["true"] --> e
-  if1 --> f1["false"] --> if2
-  if2["a > b"] --> t2["true"]
-  if2 --> f2["false"]
-  t2 --> e
-  f2 --> e
+  s(s) --> if1["if(a === b)"]
+  if1 -- true --> e
+  if1 -- false --> if2
+  if2["if(a > b)"] -- true --> e
+  if2 -- false --> e(e)
 ```
 
 Even so most coverage tools will report 4 branches.
