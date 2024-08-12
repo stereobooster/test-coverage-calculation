@@ -210,7 +210,7 @@ export function comp(a, b) {
 }
 ```
 
-This code has 3 branches (or 4, depending on how you define "branches"):
+This code has 3 or 4 branches (depending on how you define "branches"):
 
 ```mermaid
 flowchart LR
@@ -220,8 +220,6 @@ flowchart LR
   if2["if(a > b)"] -- true --> e
   if2 -- false --> e(e)
 ```
-
-Even so most coverage tools will report 4 branches.
 
 ## Example 3
 
