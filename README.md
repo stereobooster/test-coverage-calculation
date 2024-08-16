@@ -33,7 +33,7 @@ Most of code coverage tools would say this code has 4 branches. Which seemed str
 | example4.1.js | 2/2                         | 2/2                        | **3/3**               | 2/2           |
 | example4.2.js | [1/1][i795]                 | **1/1**                    | 2/2                   | 2/2           |
 | example4.3.js | 2/2                         | 2/2                        | 2/2                   | 2/2           |
-| example4.4.js | 3/3                         | [2/3][mcr68]               | 3/3                   | 3/3           |
+| example4.4.js | 3/3                         | 3/3                        | 3/3                   | 3/3           |
 | example5.1.js | 0/0                         | 0/0                        | 2/2                   | 2/2           |
 | example6.1.js | 0/0                         | 0/0                        | 2/2                   | 2/2 or 1/1    |
 | example6.2.js | 0/0                         | 0/0                        | 2/2                   | 2/2           |
